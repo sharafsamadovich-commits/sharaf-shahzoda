@@ -107,5 +107,19 @@
 
   <button class="music" id="musicBtn" aria-label="Musiqa">♪</button>
   <script src="script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const openBtn = document.querySelector(".hero-open");
+    const targetSection = document.querySelector("#invitation");
+
+    if (openBtn && targetSection) {
+      openBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
