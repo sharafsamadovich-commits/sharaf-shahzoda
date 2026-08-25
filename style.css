@@ -30,3 +30,13 @@ body {
   .hero-time{font-size:8px}
   .hero-guest{margin-top:25px!important}
 }
+/* Светлый свадебный фон и тёмный текст */
+body, .content, #invitation, .hero-photo {
+  background: radial-gradient(circle at center, #ffffff 0%, #f7f3ee 100%) !important;
+  color: #2b2623 !important;
+}
+
+/* Изменение цвета заглавных букв и текста для читаемости */
+h2, h2 em, .hero-names, strong, .section-tag {
+  color: #4a3b32 !important;
+}
