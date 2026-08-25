@@ -40,3 +40,12 @@ body, .content, #invitation, .hero-photo {
 h2, h2 em, .hero-names, strong, .section-tag {
   color: #4a3b32 !important;
 }
+html, body, div, section, .content, #invitation, .photo-frame {
+  background-color: #fcf8f5 !important;
+  background-image: none !important;
+  color: #2b2623 !important;
+}
+
+h1, h2, h3, p, span, em, strong, div {
+  color: #3a2e2b !important;
+}
