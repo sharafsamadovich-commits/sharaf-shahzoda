@@ -49,3 +49,70 @@ html, body, div, section, .content, #invitation, .photo-frame {
 h1, h2, h3, p, span, em, strong, div {
   color: #3a2e2b !important;
 }
+ /* НОВЫЙ СВАДЕБНЫЙ ФОН */
+
+html,
+body {
+  background-color: #f8f1ec !important;
+  background-image:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0) 35%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(236, 215, 211, 0.55) 0%,
+      rgba(236, 215, 211, 0) 40%
+    ),
+    linear-gradient(
+      135deg,
+      #fbf7f3 0%,
+      #f8efeb 45%,
+      #f4e7e3 100%
+    ) !important;
+}
+
+main {
+  background: transparent !important;
+}
+
+.content {
+  background-color: transparent !important;
+  background-image:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0) 32%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(235, 211, 208, 0.4) 0%,
+      rgba(235, 211, 208, 0) 38%
+    ),
+    linear-gradient(
+      135deg,
+      #fbf7f3 0%,
+      #f8efeb 50%,
+      #f3e6e1 100%
+    ) !important;
+}
+
+.hero {
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0) 35%
+    ),
+    linear-gradient(
+      135deg,
+      #fbf7f3 0%,
+      #f8efeb 50%,
+      #f3e6e1 100%
+    ) !important;
+}
+
+.photo-frame {
+  background: #eee2dc !important;
+}
