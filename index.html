@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="theme-color" content="#f5e8e2">
+  <meta name="theme-color" content="#f7ebe5">
 
   <title>Sharaf & Shahzoda — To'y Taklifnomasi</title>
 
@@ -24,26 +24,172 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+
+    /* ==============================
+       НОВЫЙ СВАДЕБНЫЙ ФОН
+       ============================== */
+
     html,
     body {
-      background:
+      background-color: #f4e4dd !important;
+
+      background-image:
         radial-gradient(
-          circle at 50% 0%,
-          #ffffff 0%,
-          #fffaf7 22%,
-          transparent 52%
+          circle at 50% -10%,
+          rgba(255,255,255,1) 0%,
+          rgba(255,250,247,0.95) 22%,
+          rgba(255,250,247,0.55) 42%,
+          rgba(255,250,247,0) 65%
+        ),
+        radial-gradient(
+          circle at -5% 45%,
+          rgba(226,191,177,0.42) 0%,
+          rgba(226,191,177,0) 45%
+        ),
+        radial-gradient(
+          circle at 105% 65%,
+          rgba(219,181,184,0.40) 0%,
+          rgba(219,181,184,0) 45%
+        ),
+        linear-gradient(
+          135deg,
+          #fffaf7 0%,
+          #f9eee9 35%,
+          #f3e3dd 70%,
+          #ead9d2 100%
         ) !important;
 
-      background-color: #f4e5df !important;
+      color: #3a2e2b;
     }
+
 
     main {
       background: transparent !important;
     }
 
-    .photo-frame {
-      background: #ead8d0 !important;
+
+    /* Фон первой части */
+
+    .hero {
+      background-color: #f4e4dd !important;
+
+      background-image:
+        radial-gradient(
+          circle at 50% -5%,
+          rgba(255,255,255,1) 0%,
+          rgba(255,251,248,0.96) 24%,
+          rgba(255,251,248,0) 58%
+        ),
+        radial-gradient(
+          circle at -5% 80%,
+          rgba(226,191,177,0.35) 0%,
+          rgba(226,191,177,0) 44%
+        ),
+        radial-gradient(
+          circle at 105% 75%,
+          rgba(219,181,184,0.34) 0%,
+          rgba(219,181,184,0) 44%
+        ),
+        linear-gradient(
+          135deg,
+          #fffaf7 0%,
+          #f9eee9 48%,
+          #f0dfd9 100%
+        ) !important;
+
+      color: #3a2e2b !important;
     }
+
+
+    /* Фон основной части */
+
+    #details-section {
+      background-color: #f3e3dd !important;
+
+      background-image:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(255,255,255,0.98) 0%,
+          rgba(255,250,247,0.88) 25%,
+          rgba(255,250,247,0) 55%
+        ),
+        radial-gradient(
+          circle at 0% 40%,
+          rgba(226,191,177,0.32) 0%,
+          rgba(226,191,177,0) 42%
+        ),
+        radial-gradient(
+          circle at 100% 70%,
+          rgba(219,181,184,0.30) 0%,
+          rgba(219,181,184,0) 43%
+        ),
+        linear-gradient(
+          135deg,
+          #fffaf7 0%,
+          #f8ece7 45%,
+          #efdfd9 100%
+        ) !important;
+
+      color: #3a2e2b !important;
+    }
+
+
+    /* Сохраняем цвета текста */
+
+    h1,
+    h2,
+    h3,
+    p,
+    span,
+    em,
+    strong,
+    blockquote,
+    footer {
+      color: #3a2e2b !important;
+    }
+
+
+    /* Акцентные элементы */
+
+    h1 i,
+    .monogram span,
+    .content h2 em,
+    .sign span,
+    .ornament {
+      color: #a88776 !important;
+    }
+
+
+    /* Рамка фотографии */
+
+    .photo-frame {
+      background-color: #ead8d0 !important;
+
+      background-image:
+        linear-gradient(
+          135deg,
+          #ead8d0 0%,
+          #f7eae5 50%,
+          #e6d3ca 100%
+        ) !important;
+    }
+
+
+    .photo-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+
+    /* Кнопка музыки */
+
+    .music {
+      background: rgba(255,248,244,0.94) !important;
+      color: #51433e !important;
+      border-color: rgba(164,130,116,0.45) !important;
+    }
+
   </style>
 
 </head>
@@ -55,27 +201,8 @@
   <main>
 
     <!-- ПЕРВАЯ СЕКЦИЯ -->
-    <section
-      class="content hero"
-      style="
-        background:
-          radial-gradient(
-            circle at 50% 5%,
-            rgba(255,255,255,1) 0%,
-            rgba(255,250,247,0.95) 25%,
-            rgba(255,250,247,0) 55%
-          ) !important;
-        background-color: #f2dfd9 !important;
-        background-image:
-          radial-gradient(
-            circle at 50% 5%,
-            rgba(255,255,255,1) 0%,
-            rgba(255,250,247,0.95) 25%,
-            rgba(255,250,247,0) 55%
-          ) !important;
-        color: #3a2e2b !important;
-      "
-    >
+
+    <section class="content hero">
 
       <div class="hero-inner">
 
@@ -129,50 +256,10 @@
 
 
     <!-- ОСНОВНАЯ СЕКЦИЯ -->
+
     <section
       class="content"
       id="details-section"
-      style="
-        background:
-          radial-gradient(
-            circle at 50% 0%,
-            rgba(255,255,255,0.98) 0%,
-            rgba(255,250,247,0.90) 25%,
-            rgba(255,250,247,0) 55%
-          ),
-          radial-gradient(
-            circle at 0% 45%,
-            rgba(224,190,177,0.35) 0%,
-            rgba(224,190,177,0) 42%
-          ),
-          radial-gradient(
-            circle at 100% 70%,
-            rgba(219,181,181,0.32) 0%,
-            rgba(219,181,181,0) 43%
-          ) !important;
-
-        background-color: #f1dfd9 !important;
-
-        background-image:
-          radial-gradient(
-            circle at 50% 0%,
-            rgba(255,255,255,0.98) 0%,
-            rgba(255,250,247,0.90) 25%,
-            rgba(255,250,247,0) 55%
-          ),
-          radial-gradient(
-            circle at 0% 45%,
-            rgba(224,190,177,0.35) 0%,
-            rgba(224,190,177,0) 42%
-          ),
-          radial-gradient(
-            circle at 100% 70%,
-            rgba(219,181,181,0.32) 0%,
-            rgba(219,181,181,0) 43%
-          ) !important;
-
-        color: #3a2e2b !important;
-      "
     >
 
       <div class="section-tag">
@@ -187,6 +274,7 @@
 
 
       <!-- ФОТО -->
+
       <div class="photo-frame">
 
         <img
@@ -198,6 +286,7 @@
 
 
       <!-- ЦИТАТА -->
+
       <blockquote>
 
         “Uning oyatlaridan biri shuki, U sizlar uchun o'zlaringizdan juftlar yaratdi,
@@ -211,6 +300,7 @@
 
 
       <!-- ОБРАТНЫЙ ОТСЧЁТ -->
+
       <div class="countdown-wrap">
 
         <div class="section-tag">
@@ -248,6 +338,7 @@
 
 
       <!-- ДЕТАЛИ -->
+
       <div class="details">
 
         <div class="section-tag">
@@ -267,29 +358,47 @@
           <div class="event-grid">
 
             <div>
-              <span>Sana</span>
+
+              <span>
+                Sana
+              </span>
+
               <b>
                 19 Sentyabr 2026, Shanba
               </b>
+
             </div>
 
+
             <div>
-              <span>Vaqt</span>
+
+              <span>
+                Vaqt
+              </span>
+
               <b>
                 19:00
               </b>
+
             </div>
 
+
             <div>
-              <span>Manzil</span>
+
+              <span>
+                Manzil
+              </span>
+
               <b>
                 Zarafshon shahar,
                 <br>
                 Billur to'yxonasi
               </b>
+
             </div>
 
           </div>
+
 
           <a
             class="map-btn"
@@ -306,6 +415,7 @@
 
 
       <!-- ЗАВЕРШЕНИЕ -->
+
       <div class="closing">
 
         <div class="ornament">
@@ -334,6 +444,7 @@
 
 
   <!-- КНОПКА МУЗЫКИ -->
+
   <button
     class="music"
     id="musicBtn"
@@ -345,6 +456,7 @@
 
 
   <!-- JAVASCRIPT -->
+
   <script src="script.js"></script>
 
 </body>
