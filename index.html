@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="theme-color" content="#fcf8f5">
+  <meta name="theme-color" content="#f7eee9">
 
   <title>Sharaf & Shahzoda — To'y Taklifnomasi</title>
 
@@ -23,45 +23,80 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- ТОЛЬКО ФОН -->
   <style>
     html,
     body {
-      background-color: #fcf8f5 !important;
-      color: #3a2e2b !important;
+      background:
+        radial-gradient(
+          circle at 15% 10%,
+          rgba(255, 255, 255, 0.98) 0%,
+          rgba(255, 255, 255, 0) 32%
+        ),
+        radial-gradient(
+          circle at 85% 80%,
+          rgba(235, 211, 208, 0.55) 0%,
+          rgba(235, 211, 208, 0) 38%
+        ),
+        linear-gradient(
+          135deg,
+          #fcf8f5 0%,
+          #f8efeb 48%,
+          #f1e1dd 100%
+        ) !important;
+
+      background-attachment: fixed !important;
+      color: #3a2e2b;
     }
 
     main {
-      background-color: #fcf8f5 !important;
+      background: transparent !important;
     }
 
     .content {
-      background-color: #fcf8f5 !important;
-      background-image: none !important;
+      background:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(255, 255, 255, 0.94) 0%,
+          rgba(255, 255, 255, 0) 34%
+        ),
+        radial-gradient(
+          circle at 90% 75%,
+          rgba(235, 211, 208, 0.45) 0%,
+          rgba(235, 211, 208, 0) 40%
+        ),
+        linear-gradient(
+          135deg,
+          #fcf8f5 0%,
+          #f8efeb 50%,
+          #f2e4df 100%
+        ) !important;
+
       color: #3a2e2b !important;
     }
 
-    h1,
-    h2,
-    h3,
-    p,
-    span,
-    em,
-    strong,
-    div,
-    blockquote,
-    footer {
-      color: #3a2e2b !important;
+    .hero {
+      background:
+        radial-gradient(
+          circle at 50% 18%,
+          rgba(255, 255, 255, 0.98) 0%,
+          rgba(255, 255, 255, 0) 36%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(241, 218, 215, 0.42) 0%,
+          rgba(241, 218, 215, 0) 40%
+        ),
+        linear-gradient(
+          135deg,
+          #fcf8f5 0%,
+          #f8efeb 50%,
+          #f1e1dd 100%
+        ) !important;
     }
 
     .photo-frame {
-      background-color: #fcf8f5 !important;
-      background-image: none !important;
-    }
-
-    .photo-frame img {
-      display: block;
-      width: 100%;
-      height: auto;
+      background: #eee1dc !important;
     }
   </style>
 </head>
@@ -73,10 +108,7 @@
   <main>
 
     <!-- ПЕРВАЯ СЕКЦИЯ -->
-    <section
-      class="content hero"
-      style="background-color: #fcf8f5 !important; color: #3a2e2b !important;"
-    >
+    <section class="content hero">
 
       <div class="hero-inner">
 
@@ -95,6 +127,7 @@
         </p>
 
         <div class="date-card">
+
           <span>19</span>
 
           <div>
@@ -103,6 +136,7 @@
           </div>
 
           <span>19:00</span>
+
         </div>
 
         <p class="guest">
@@ -129,7 +163,6 @@
     <section
       class="content"
       id="details-section"
-      style="background-color: #fcf8f5 !important; color: #3a2e2b !important;"
     >
 
       <div class="section-tag">
@@ -248,7 +281,6 @@
 
           </div>
 
-
           <a
             class="map-btn"
             href="https://www.google.com/maps/search/?api=1&query=Billur+to%27yxonasi+Zarafshon+shahar"
@@ -302,8 +334,8 @@
   </button>
 
 
-  <!-- ОСНОВНОЙ JAVASCRIPT -->
- <script src="script.js"></script>
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
 
 </body>
 </html>
