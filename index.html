@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="theme-color" content="#f7ebe5">
+  <meta name="theme-color" content="#f8eee9">
 
   <title>Sharaf & Shahzoda — To'y Taklifnomasi</title>
 
@@ -25,116 +25,158 @@
 
   <style>
 
-    /* ==============================
+    /* =========================================
        НОВЫЙ СВАДЕБНЫЙ ФОН
-       ============================== */
+       ========================================= */
 
     html,
     body {
-      background-color: #f4e4dd !important;
+      background: #f5e7e1 !important;
+    }
 
-      background-image:
+    body {
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /*
+      Отдельный слой фона.
+      Он не зависит от background у .content
+      и поэтому не конфликтует с предыдущим CSS.
+    */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      z-index: 0;
+      pointer-events: none;
+
+      background:
+
+        /* центральное свечение */
         radial-gradient(
-          circle at 50% -10%,
-          rgba(255,255,255,1) 0%,
-          rgba(255,250,247,0.95) 22%,
-          rgba(255,250,247,0.55) 42%,
-          rgba(255,250,247,0) 65%
+          ellipse at 50% 18%,
+          rgba(255,255,255,0.98) 0%,
+          rgba(255,250,247,0.92) 23%,
+          rgba(255,250,247,0.30) 52%,
+          rgba(255,250,247,0) 72%
         ),
+
+        /* пудровое облако слева */
         radial-gradient(
-          circle at -5% 45%,
-          rgba(226,191,177,0.42) 0%,
-          rgba(226,191,177,0) 45%
+          ellipse at -8% 35%,
+          rgba(225,185,177,0.50) 0%,
+          rgba(225,185,177,0.25) 22%,
+          rgba(225,185,177,0) 52%
         ),
+
+        /* пудровое облако справа */
         radial-gradient(
-          circle at 105% 65%,
-          rgba(219,181,184,0.40) 0%,
-          rgba(219,181,184,0) 45%
+          ellipse at 108% 65%,
+          rgba(216,180,184,0.46) 0%,
+          rgba(216,180,184,0.20) 23%,
+          rgba(216,180,184,0) 52%
         ),
+
+        /* нижнее шампань-свечение */
+        radial-gradient(
+          ellipse at 50% 115%,
+          rgba(211,178,157,0.35) 0%,
+          rgba(211,178,157,0.12) 30%,
+          rgba(211,178,157,0) 62%
+        ),
+
+        /* основа */
         linear-gradient(
           135deg,
           #fffaf7 0%,
-          #f9eee9 35%,
-          #f3e3dd 70%,
-          #ead9d2 100%
-        ) !important;
-
-      color: #3a2e2b;
+          #f9efeb 38%,
+          #f3e4de 72%,
+          #eadbd5 100%
+        );
     }
 
+
+    /*
+      Очень тонкий золотистый декоративный узор.
+    */
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      z-index: 1;
+      pointer-events: none;
+
+      opacity: 0.38;
+
+      background:
+
+        radial-gradient(
+          circle at 7% 12%,
+          transparent 0 58px,
+          rgba(174,139,119,0.18) 59px,
+          transparent 60px
+        ),
+
+        radial-gradient(
+          circle at 93% 88%,
+          transparent 0 72px,
+          rgba(174,139,119,0.16) 73px,
+          transparent 74px
+        ),
+
+        radial-gradient(
+          circle at 94% 13%,
+          transparent 0 38px,
+          rgba(174,139,119,0.12) 39px,
+          transparent 40px
+        ),
+
+        radial-gradient(
+          circle at 6% 88%,
+          transparent 0 42px,
+          rgba(174,139,119,0.12) 43px,
+          transparent 44px
+        );
+    }
+
+
+    /*
+      Весь настоящий контент поверх фона.
+    */
+
+    main,
+    .music,
+    .grain {
+      position: relative;
+      z-index: 2;
+    }
+
+
+    /*
+      Убираем старые принудительные фоны,
+      которые мешали новому слою.
+    */
 
     main {
       background: transparent !important;
     }
 
-
-    /* Фон первой части */
-
-    .hero {
-      background-color: #f4e4dd !important;
-
-      background-image:
-        radial-gradient(
-          circle at 50% -5%,
-          rgba(255,255,255,1) 0%,
-          rgba(255,251,248,0.96) 24%,
-          rgba(255,251,248,0) 58%
-        ),
-        radial-gradient(
-          circle at -5% 80%,
-          rgba(226,191,177,0.35) 0%,
-          rgba(226,191,177,0) 44%
-        ),
-        radial-gradient(
-          circle at 105% 75%,
-          rgba(219,181,184,0.34) 0%,
-          rgba(219,181,184,0) 44%
-        ),
-        linear-gradient(
-          135deg,
-          #fffaf7 0%,
-          #f9eee9 48%,
-          #f0dfd9 100%
-        ) !important;
-
-      color: #3a2e2b !important;
-    }
-
-
-    /* Фон основной части */
-
+    .content,
+    .hero,
     #details-section {
-      background-color: #f3e3dd !important;
-
-      background-image:
-        radial-gradient(
-          circle at 50% 0%,
-          rgba(255,255,255,0.98) 0%,
-          rgba(255,250,247,0.88) 25%,
-          rgba(255,250,247,0) 55%
-        ),
-        radial-gradient(
-          circle at 0% 40%,
-          rgba(226,191,177,0.32) 0%,
-          rgba(226,191,177,0) 42%
-        ),
-        radial-gradient(
-          circle at 100% 70%,
-          rgba(219,181,184,0.30) 0%,
-          rgba(219,181,184,0) 43%
-        ),
-        linear-gradient(
-          135deg,
-          #fffaf7 0%,
-          #f8ece7 45%,
-          #efdfd9 100%
-        ) !important;
-
-      color: #3a2e2b !important;
+      background: transparent !important;
+      background-image: none !important;
     }
 
 
-    /* Сохраняем цвета текста */
+    /*
+      Цвет текста оставляем прежним.
+    */
 
     h1,
     h2,
@@ -149,45 +191,41 @@
     }
 
 
-    /* Акцентные элементы */
+    /*
+      Акцентный цвет.
+    */
 
     h1 i,
     .monogram span,
     .content h2 em,
     .sign span,
     .ornament {
-      color: #a88776 !important;
+      color: #a78978 !important;
     }
 
 
-    /* Рамка фотографии */
+    /*
+      Фото оставляем прежним,
+      только рамка становится мягче.
+    */
 
     .photo-frame {
-      background-color: #ead8d0 !important;
+      background: #ead8d1 !important;
+      background-image: none !important;
 
-      background-image:
-        linear-gradient(
-          135deg,
-          #ead8d0 0%,
-          #f7eae5 50%,
-          #e6d3ca 100%
-        ) !important;
+      box-shadow:
+        0 18px 45px rgba(88,62,53,0.12);
     }
 
 
-    .photo-frame img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-
-    /* Кнопка музыки */
+    /*
+      Кнопка музыки.
+    */
 
     .music {
-      background: rgba(255,248,244,0.94) !important;
+      background: rgba(255,249,246,0.94) !important;
       color: #51433e !important;
-      border-color: rgba(164,130,116,0.45) !important;
+      border-color: rgba(164,128,110,0.45) !important;
     }
 
   </style>
