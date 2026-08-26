@@ -818,3 +818,21 @@ blockquote footer {
   }
 
   }
+
+.music {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 20px !important;
+  width: 45px !important;
+  height: 45px !important;
+  border: 1px solid #c8b5aa !important;
+  border-radius: 50% !important;
+  background: rgba(255, 248, 244, 0.95) !important;
+  color: #51433e !important;
+  font-size: 20px !important;
+  z-index: 9999 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
