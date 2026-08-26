@@ -8,80 +8,85 @@ html {
 
 body {
   margin: 0;
+  color: #3a2e2b;
+  font-family: Manrope, Arial, sans-serif;
+
   background:
     radial-gradient(
-      circle at 50% 0%,
-      rgba(255, 255, 255, 0.98) 0%,
-      rgba(255, 255, 255, 0.75) 20%,
-      rgba(255, 255, 255, 0) 48%
+      circle at 50% -10%,
+      rgba(255,255,255,1) 0%,
+      rgba(255,250,247,.96) 20%,
+      rgba(255,250,247,0) 55%
     ),
     radial-gradient(
-      circle at 0% 35%,
-      rgba(226, 196, 181, 0.34) 0%,
-      rgba(226, 196, 181, 0) 43%
+      circle at -10% 45%,
+      rgba(224,190,177,.34) 0%,
+      rgba(224,190,177,0) 43%
     ),
     radial-gradient(
-      circle at 100% 65%,
-      rgba(221, 186, 185, 0.32) 0%,
-      rgba(221, 186, 185, 0) 44%
+      circle at 110% 65%,
+      rgba(218,183,185,.32) 0%,
+      rgba(218,183,185,0) 43%
     ),
     linear-gradient(
       135deg,
       #fffaf7 0%,
-      #f9eee9 38%,
-      #f4e4de 68%,
-      #eadbd5 100%
+      #f8eee9 45%,
+      #f0dfd9 100%
     );
 
-  color: #24231f;
-  font-family: Manrope, Arial, sans-serif;
+  background-attachment: fixed;
 }
 
 
-/* Лёгкая текстура */
+/* Лёгкая бумажная текстура */
 
 .grain {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.035;
+  opacity: .025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   z-index: 20;
 }
 
 
-/* ПЕРВАЯ СЕКЦИЯ */
+/* =========================
+   ПЕРВЫЙ ЭКРАН
+   ========================= */
 
 .hero {
   min-height: 100svh;
   display: grid;
   place-items: center;
+
   padding: 34px 22px;
+
   position: relative;
   overflow: hidden;
 
   background:
     radial-gradient(
-      circle at 50% 8%,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 252, 249, 0.95) 23%,
-      rgba(255, 252, 249, 0) 53%
+      ellipse at center top,
+      rgba(255,255,255,1) 0%,
+      rgba(255,250,247,.94) 28%,
+      rgba(255,250,247,0) 62%
     ),
     radial-gradient(
-      circle at 5% 85%,
-      rgba(226, 194, 179, 0.30) 0%,
-      rgba(226, 194, 179, 0) 43%
+      circle at 0% 100%,
+      rgba(226,192,178,.32),
+      transparent 45%
     ),
     radial-gradient(
-      circle at 95% 75%,
-      rgba(222, 187, 185, 0.30) 0%,
-      rgba(222, 187, 185, 0) 43%
+      circle at 100% 100%,
+      rgba(219,183,185,.30),
+      transparent 45%
     ),
     linear-gradient(
-      135deg,
-      #fffaf7 0%,
-      #f9eee9 50%,
-      #f1e1dc 100%
+      145deg,
+      #fffaf7,
+      #f7ebe6,
+      #eeded8
     );
 }
 
@@ -92,65 +97,110 @@ body {
 .hero:after {
   content: "";
   position: absolute;
-  border: 1px solid rgba(164, 130, 116, 0.16);
+
+  width: 420px;
+  height: 420px;
+
+  border: 1px solid rgba(157,119,104,.13);
   border-radius: 50%;
-  width: 390px;
-  height: 390px;
+
+  pointer-events: none;
 }
 
 .hero:before {
-  top: -200px;
-  left: -180px;
+  top: -225px;
+  left: -195px;
 }
 
 .hero:after {
-  bottom: -230px;
-  right: -180px;
+  right: -200px;
+  bottom: -240px;
 }
 
 
-/* Текст */
+/* Дополнительный декоративный контур */
+
+.hero-inner:before {
+  content: "✦";
+  position: absolute;
+
+  top: 11%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 11px;
+  color: rgba(164,128,110,.45);
+}
+
+
+/* Контент */
 
 .hero-inner {
   text-align: center;
   max-width: 650px;
+
+  position: relative;
+  z-index: 2;
+
   animation: rise 1.1s ease both;
 }
 
+
+/* Верхняя надпись */
+
 .eyebrow,
 .section-tag {
-  letter-spacing: 0.28em;
+  letter-spacing: .28em;
   font-size: 10px;
   font-weight: 600;
-  color: #7c6b63;
+
+  color: #806e65;
 }
+
+
+/* Монограмма */
 
 .monogram {
   font: 500 70px/1 "Cormorant Garamond", serif;
   margin: 38px 0 12px;
+
+  color: #3c302d;
 }
 
 .monogram span {
   font-size: 35px;
-  color: #ad8d78;
+  color: #aa8877;
   margin: 0 7px;
 }
 
+
+/* Имена */
+
 h1 {
-  font: 500 clamp(52px, 12vw, 92px)/0.9 "Cormorant Garamond", serif;
+  font: 500 clamp(52px,12vw,92px)/.9 "Cormorant Garamond",serif;
+
   margin: 0;
-  letter-spacing: -0.045em;
+
+  letter-spacing: -.045em;
+
+  color: #3b2e2b;
 }
 
 h1 i {
   font-weight: 400;
-  color: #ad8d78;
+  color: #aa8877;
 }
 
+
+/* Подзаголовок */
+
 .intro {
-  font: 400 18px "Cormorant Garamond", serif;
+  font: 400 18px "Cormorant Garamond",serif;
+
   margin: 28px auto;
-  color: #71615a;
+
+  color: #71615b;
 }
 
 
@@ -160,24 +210,31 @@ h1 i {
   display: flex;
   justify-content: center;
   align-items: center;
+
   gap: 26px;
+
   margin: 32px auto;
+
   width: max-content;
+
   padding: 13px 24px;
-  border-top: 1px solid rgba(164, 130, 116, 0.55);
-  border-bottom: 1px solid rgba(164, 130, 116, 0.55);
+
+  border-top: 1px solid rgba(164,128,110,.48);
+  border-bottom: 1px solid rgba(164,128,110,.48);
 }
 
 .date-card span {
   font-size: 12px;
-  letter-spacing: 0.15em;
+  letter-spacing: .15em;
 }
 
 .date-card div {
   display: flex;
   gap: 6px;
+
   align-items: baseline;
-  font-family: "Cormorant Garamond", serif;
+
+  font-family: "Cormorant Garamond",serif;
 }
 
 .date-card b {
@@ -190,11 +247,12 @@ h1 i {
 }
 
 
-/* Гость */
+/* Приглашение гостя */
 
 .guest {
   font-size: 14px;
   line-height: 1.8;
+
   color: #71645e;
 }
 
@@ -204,62 +262,106 @@ h1 i {
 }
 
 
-/* Кнопки */
+/* =========================
+   КНОПКИ
+   ========================= */
 
 .open-btn,
 .map-btn {
-  border: 0;
-  background: #332a27;
-  color: #fffdf8;
-  padding: 15px 23px;
+
+  border: 1px solid rgba(255,255,255,.15);
+
+  background:
+    linear-gradient(
+      135deg,
+      #3b302c,
+      #292321
+    );
+
+  color: #fffaf5;
+
+  padding: 15px 24px;
+
   font: 600 11px Manrope;
-  letter-spacing: 0.08em;
+
+  letter-spacing: .08em;
+
   text-transform: uppercase;
+
   cursor: pointer;
+
   text-decoration: none;
+
   display: inline-flex;
+
   gap: 15px;
+
   align-items: center;
-  transition: 0.25s;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
 }
 
 .open-btn:hover,
 .map-btn:hover {
-  transform: translateY(-2px);
-  background: #51433e;
+
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #51413a,
+      #332a27
+    );
+
+  box-shadow:
+    0 10px 28px rgba(65,45,38,.18);
+}
+
+.open-btn:active,
+.map-btn:active {
+  transform: translateY(0);
 }
 
 
-/* ОСНОВНОЙ КОНТЕНТ */
+/* =========================
+   ОСНОВНОЙ КОНТЕНТ
+   ========================= */
 
 .content {
+
   max-width: 760px;
+
   margin: auto;
+
   padding: 110px 24px 70px;
+
   text-align: center;
 
   background:
     radial-gradient(
-      circle at 50% 0%,
-      rgba(255, 255, 255, 0.98) 0%,
-      rgba(255, 250, 247, 0.85) 25%,
-      rgba(255, 250, 247, 0) 55%
+      ellipse at center top,
+      rgba(255,255,255,.98),
+      rgba(255,250,247,.80) 30%,
+      transparent 60%
     ),
     radial-gradient(
-      circle at 0% 50%,
-      rgba(228, 198, 183, 0.27) 0%,
-      rgba(228, 198, 183, 0) 40%
+      circle at 0% 40%,
+      rgba(225,192,179,.26),
+      transparent 43%
     ),
     radial-gradient(
       circle at 100% 70%,
-      rgba(223, 190, 189, 0.25) 0%,
-      rgba(223, 190, 189, 0) 42%
+      rgba(220,184,185,.25),
+      transparent 43%
     ),
     linear-gradient(
       135deg,
-      #fffaf7 0%,
-      #f9eee9 48%,
-      #f2e3de 100%
+      #fffaf7,
+      #f8ece7 50%,
+      #f0dfd9
     );
 
   color: #3a2e2b;
@@ -269,80 +371,148 @@ h1 i {
 /* Заголовок */
 
 .content h2 {
-  font: 500 clamp(42px, 8vw, 67px)/0.98 "Cormorant Garamond", serif;
-  letter-spacing: -0.035em;
+
+  font: 500 clamp(42px,8vw,67px)/.98 "Cormorant Garamond",serif;
+
+  letter-spacing: -.035em;
+
   margin: 20px 0 45px;
+
+  color: #3b302d;
 }
 
 .content h2 em {
   font-style: italic;
-  color: #987c6d;
+  color: #96786a;
 }
 
 
-/* ФОТО */
+/* =========================
+   ФОТО
+   ========================= */
 
 .photo-frame {
+
   max-width: 620px;
+
   margin: 0 auto 70px;
+
   position: relative;
-  padding: 10px;
+
+  padding: 11px;
 
   background:
     linear-gradient(
       135deg,
-      #ead9d1 0%,
-      #f8ece6 50%,
-      #e7d5cd 100%
+      #e4d0c7,
+      #f8ebe5 45%,
+      #e4d0c7
     );
+
+  box-shadow:
+    0 20px 50px rgba(91,63,53,.12);
+
 }
+
+
+/* Тонкая внутренняя рамка */
+
+.photo-frame:before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 5px;
+
+  border: 1px solid rgba(255,255,255,.7);
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
 
 .photo-frame img {
+
   display: block;
+
   width: 100%;
+
   height: auto;
+
   max-height: 760px;
+
   object-fit: cover;
+
   object-position: center 34%;
+
 }
 
 
-/* ЦИТАТА */
+/* =========================
+   ЦИТАТА
+   ========================= */
 
 blockquote {
-  font: 400 22px/1.5 "Cormorant Garamond", serif;
+
+  font: 400 22px/1.5 "Cormorant Garamond",serif;
+
   margin: 0 auto 90px;
+
   max-width: 620px;
+
   color: #554943;
+
 }
 
 blockquote footer {
+
   font: 600 9px/1.5 Manrope;
-  letter-spacing: 0.2em;
+
+  letter-spacing: .2em;
+
   text-transform: uppercase;
+
   margin-top: 18px;
-  color: #927e73;
+
+  color: #917c72;
+
 }
 
 
-/* ТАЙМЕР */
+/* =========================
+   ТАЙМЕР
+   ========================= */
 
 .countdown-wrap {
+
   padding: 55px 0;
-  border-top: 1px solid rgba(164, 130, 116, 0.25);
-  border-bottom: 1px solid rgba(164, 130, 116, 0.25);
+
+  border-top: 1px solid rgba(164,128,110,.25);
+
+  border-bottom: 1px solid rgba(164,128,110,.25);
+
 }
 
 .countdown {
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-columns: repeat(4,1fr);
+
   gap: 12px;
+
   margin-top: 30px;
+
 }
 
 .countdown div {
+
   padding: 12px;
-  border-right: 1px solid rgba(164, 130, 116, 0.25);
+
+  border-right: 1px solid rgba(164,128,110,.25);
+
 }
 
 .countdown div:last-child {
@@ -350,123 +520,202 @@ blockquote footer {
 }
 
 .countdown strong {
+
   display: block;
-  font: 500 38px "Cormorant Garamond", serif;
+
+  font: 500 38px "Cormorant Garamond",serif;
+
+  color: #493a35;
+
 }
 
 .countdown span {
+
   font-size: 9px;
-  letter-spacing: 0.16em;
+
+  letter-spacing: .16em;
+
   text-transform: uppercase;
+
   color: #88766d;
+
 }
 
 
-/* ДЕТАЛИ */
+/* =========================
+   ДЕТАЛИ
+   ========================= */
 
 .details {
   padding: 95px 0;
 }
 
 .event {
+
   margin-top: 27px;
+
   padding: 34px 0;
-  border-top: 1px solid rgba(164, 130, 116, 0.30);
-  border-bottom: 1px solid rgba(164, 130, 116, 0.30);
+
+  border-top: 1px solid rgba(164,128,110,.30);
+
+  border-bottom: 1px solid rgba(164,128,110,.30);
+
   text-align: left;
+
   position: relative;
 }
 
 .event-number {
-  font: 500 13px "Cormorant Garamond", serif;
-  color: #987e70;
+
+  font: 500 13px "Cormorant Garamond",serif;
+
+  color: #987b6d;
 }
 
 .event h3 {
-  font: 500 45px "Cormorant Garamond", serif;
+
+  font: 500 45px "Cormorant Garamond",serif;
+
   margin: 5px 0 30px;
+
+  color: #463732;
 }
 
 .event-grid {
+
   display: grid;
+
   grid-template-columns: 1fr 1fr 1.35fr;
+
   gap: 20px;
 }
 
 .event-grid span {
+
   display: block;
+
   font-size: 9px;
-  letter-spacing: 0.15em;
+
+  letter-spacing: .15em;
+
   text-transform: uppercase;
+
   color: #917e75;
+
   margin-bottom: 8px;
 }
 
 .event-grid b {
+
   font-size: 12px;
+
   line-height: 1.6;
+
   font-weight: 500;
+
+  color: #443732;
 }
 
 
-/* ФИНАЛ */
+/* =========================
+   ФИНАЛ
+   ========================= */
 
 .closing {
+
   padding: 65px 0 20px;
 }
 
 .ornament {
+
   font-size: 15px;
-  color: #aa8a77;
+
+  color: #aa8876;
+
   margin-bottom: 28px;
 }
 
 .closing p {
-  font: 400 22px/1.55 "Cormorant Garamond", serif;
+
+  font: 400 22px/1.55 "Cormorant Garamond",serif;
+
   color: #5c4e49;
 }
 
 .sign {
-  font: 500 38px "Cormorant Garamond", serif;
+
+  font: 500 38px "Cormorant Garamond",serif;
+
   margin: 42px 0 15px;
+
+  color: #40332f;
 }
 
 .sign span {
-  color: #aa8a77;
+  color: #aa8876;
 }
 
 .final-date {
+
   font-size: 10px;
-  letter-spacing: 0.3em;
+
+  letter-spacing: .3em;
+
   color: #8b776d;
 }
 
 
-/* МУЗЫКА */
+/* =========================
+   МУЗЫКА
+   ========================= */
 
 .music {
+
   position: fixed;
+
   right: 20px;
+
   bottom: 20px;
+
   width: 45px;
+
   height: 45px;
 
-  border: 1px solid rgba(164, 130, 116, 0.45);
+  border: 1px solid rgba(164,128,110,.45);
+
   border-radius: 50%;
 
-  background: rgba(255, 248, 244, 0.92);
+  background:
+    rgba(255,248,244,.94);
 
   font-size: 20px;
+
   color: #51433e;
 
   z-index: 30;
+
   cursor: pointer;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.music:hover {
+
+  transform: scale(1.07);
+
+  box-shadow:
+    0 8px 25px rgba(80,55,47,.15);
 }
 
 
-/* АНИМАЦИЯ */
+/* =========================
+   АНИМАЦИЯ
+   ========================= */
 
 @keyframes rise {
+
   from {
     opacity: 0;
     transform: translateY(18px);
@@ -476,19 +725,30 @@ blockquote footer {
     opacity: 1;
     transform: none;
   }
+
 }
 
 
-/* МОБИЛЬНАЯ ВЕРСИЯ */
+/* =========================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ========================= */
 
-@media (max-width: 620px) {
+@media(max-width:620px) {
 
   .hero {
     padding: 28px 18px;
   }
 
+  .hero:before,
+  .hero:after {
+    width: 300px;
+    height: 300px;
+  }
+
   .monogram {
+
     font-size: 58px;
+
     margin-top: 27px;
   }
 
@@ -501,16 +761,23 @@ blockquote footer {
   }
 
   .date-card {
+
     gap: 15px;
+
     padding: 11px 15px;
   }
 
   .content {
+
     padding: 80px 18px 55px;
   }
 
   .content h2 {
     font-size: 46px;
+  }
+
+  .photo-frame {
+    padding: 9px;
   }
 
   .countdown strong {
@@ -522,11 +789,13 @@ blockquote footer {
   }
 
   .event-grid {
+
     grid-template-columns: 1fr 1fr;
   }
 
   .event-grid div:last-child {
-    grid-column: 1 / -1;
+
+    grid-column: 1/-1;
   }
 
   .event h3 {
@@ -537,4 +806,15 @@ blockquote footer {
     font-size: 20px;
   }
 
-}
+  .music {
+
+    right: 16px;
+
+    bottom: 16px;
+
+    width: 43px;
+
+    height: 43px;
+  }
+
+  }
